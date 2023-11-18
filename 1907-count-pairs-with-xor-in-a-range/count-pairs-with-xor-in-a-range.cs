@@ -36,7 +36,7 @@ public class Solution {
         public void Insert(int num)
         {
             Node node = Root;
-            for (int i = 14; i >= 0; i--)
+            for (int i = 30; i >= 0; i--)
             {
                 int bit = ((num >> i) & 1);
                 if (!node.IsContains(bit))
@@ -80,8 +80,8 @@ public class Solution {
 
         foreach (var num in nums)
         {
-            ans += trie.dfs(trie.Root, 14, high, num);
-            ans -= trie.dfs(trie.Root, 14, low - 1, num);
+            ans += trie.dfs(trie.Root, 30, high, num);
+            ans -= trie.dfs(trie.Root, 30, low - 1, num);
             trie.Insert(num);
         }
 
