@@ -25,7 +25,7 @@ public class Solution {
         foreach(var v in list)
         {
             long a = v.Value;
-            cnt = (cnt + a*(a - 1)/2) % mod;
+            cnt = (cnt + (a*(a - 1))/2) % mod;
         }
         return (int)cnt;
     }
