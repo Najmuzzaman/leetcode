@@ -11,11 +11,11 @@ public class Solution {
     }
     public int CountNicePairs(int[] nums) {
         int mod = 1000000007;
-        Dictionary<long, int> list = new Dictionary<long, int>();
+        Dictionary<int, int> list = new Dictionary<int, int>();
         int n = nums.Length;
         for(int i=0;i<n;i++)
         {
-            long a = nums[i] - reverse(nums[i]);
+            int a = nums[i] - reverse(nums[i]);
             if (list.ContainsKey(a))
                 list[a]++;
             else
