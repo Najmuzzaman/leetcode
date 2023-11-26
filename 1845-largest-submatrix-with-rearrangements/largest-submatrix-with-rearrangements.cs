@@ -1,8 +1,5 @@
 public class Solution {
     public int LargestSubmatrix(int[][] matrix) {
-        if (matrix == null || matrix.Length == 0 || matrix[0].Length == 0)
-            return 0;
-
         int m = matrix.Length;
         int n = matrix[0].Length;
         int ans = 0;
@@ -15,7 +12,6 @@ public class Solution {
                     matrix[row][col] += matrix[row - 1][col];
                 }
             }
-
             int[] currRow =new int[n];
             Array.Copy(matrix[row], currRow, n); 
             Array.Sort(currRow);
