@@ -11,7 +11,6 @@ public class Solution {
         {
             ans = Math.Max(ans, currRow[i] * (i + 1));
         }
-
         for (int row = 1; row < m; row++)
         {
             for (int col = 0; col < n; col++)
