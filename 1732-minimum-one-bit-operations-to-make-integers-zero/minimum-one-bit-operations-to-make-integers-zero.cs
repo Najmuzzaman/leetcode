@@ -4,13 +4,10 @@ public class Solution {
         if(n==1) return 1;
         if(n<0) return n;
         int i=0;
-        int a=n;
-        while(a!=1)
+        while((1<<i)<=n)
         {
             i++;
-            a/=2;
         }
-        if((1<<i)<=n) i++;
         return ((1<<i)-1) - MinimumOneBitOperations(n-(1<<(i-1)));
     }
 }
