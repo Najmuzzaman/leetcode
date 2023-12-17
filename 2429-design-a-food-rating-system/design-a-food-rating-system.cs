@@ -52,9 +52,14 @@ public class FoodRatings
         public string HighestRated(string cuisine)
         {
             var highestRating = foody[cuisine].First();
-            List<string> S = highestRating.Value;
-            S.Sort();
-            return S[0];
+            string S = highestRating.Value[0];
+            foreach (string s in highestRating.Value)
+            {
+                int com = String.Compare(S, s);
+                if (com > 0)
+                    S = s;
+            }
+            return S;
         }
 }
 
