@@ -3,7 +3,6 @@ public class Solution {
         int n=s.Length;
         int dp = 1;
         int dp1 = 0;
-        if (s[0] == '0') return 0;
         for(int i=n-1;i>=0;i--)
         {
             int a= s[i] == '0'?0:dp;
