@@ -4,11 +4,10 @@ public class Solution {
         int[] m=new int[26];
         for(int i=0;i<n;i++)
         {
-            int s=words[i].Length;
-             for(int j=0;j<s;j++)
+            foreach(char a in words[i])
             {
-                m[words[i][j]-'a']++;
-            } 
+                m[a - 'a']++;
+            }
         }
         for (int i = 0; i < 26;i++)
         {
