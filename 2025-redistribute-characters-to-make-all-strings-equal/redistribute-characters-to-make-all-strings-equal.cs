@@ -1,15 +1,16 @@
 public class Solution {
     public bool MakeEqual(string[] words) {
         int n = words.Length;
-        int[] m=new int[30];
+        int[] m=new int[26];
         for(int i=0;i<n;i++)
         {
-            foreach(char a in words[i])
+            int s=words[i].Length;
+             for(int j=0;j<s;j++)
             {
-                m[a - 'a']++;
-            }
+                m[words[i][j]-'a']++;
+            } 
         }
-        for (int i = 0; i < 30;i++)
+        for (int i = 0; i < 26;i++)
         {
             if(m[i]!=0)
             {
