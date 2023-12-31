@@ -1,7 +1,7 @@
 public class Solution {
     public int MaxLengthBetweenEqualCharacters(string s) {
         int n = s.Length;
-        int[] m=new int[30];
+        int[] m=new int[27];
         int dis=0;
         bool flag = false;
         for(int i=0;i<n;i++)
