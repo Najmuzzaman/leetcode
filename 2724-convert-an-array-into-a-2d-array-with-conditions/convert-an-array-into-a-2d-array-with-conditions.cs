@@ -1,7 +1,5 @@
 public class Solution {
     public IList<IList<int>> FindMatrix(int[] nums) {
-        int n = nums.Length;
-        // Count the frequency of each element in nums
         Dictionary<int, int> frequency = new Dictionary<int, int>();
         foreach (var num in nums)
         {
